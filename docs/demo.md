@@ -121,6 +121,11 @@ Update environment variable to point to your copied file:
 $ export NALMS_GRAFANA_DATASOURCE_FILE=$(pwd)/datasource.yml
 ```
 
+Add the Grafana datasource to the file:
+```
+$ nalms add-grafana-datasource Demo
+```
+
 Create a dashboard directory:
 ```
 $ mkdir dashboards
@@ -131,10 +136,6 @@ Update environment variable to point to your directory:
 $ export NALMS_GRAFANA_DASHBOARD_DIR=$(pwd)/dashboards
 ```
 
-Add the Grafana datasource to the file:
-```
-$ nalms add-grafana-datasource Demo
-```
 
 This appended the datasource to the file `datasource.yml`. Now, create the Grafana dashboard:
 ```
@@ -155,14 +156,11 @@ $ nalms start-phoebus-client Demo
 
 Navigate to `Applications > Alarm > Alarm Tree` to view the process variable values. Navigate to `Applications > Alarm > Alarm Log`
 
-
-
 To inspect the Docker containers run:
 ```
 $ docker ps # to list container ids
 $ docker stats {CONTAINER_ID}
 ```
-
 
 ## Cleanup
 
